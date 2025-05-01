@@ -522,6 +522,75 @@
 
 ----------------------------------------------------------------------------------------------------------------------------------
 
-----------------------------------------------------------------------------------------------------------------------------------
+{ Configuring Git } :
+
+=> git config --global user.email "your-email@example.com"
+=> git config --global user.name "Your Name"
+
+> This will set your email and name as your global settings. 
+> You can change these settings at any time by running the same command again.
 
 ----------------------------------------------------------------------------------------------------------------------------------
+
+{ Setup SSH Key } :
+
+> Need to setup ssh key and add it to your github account. 
+> You can do this by following the instructions on the Github website.
+> You can find the exact steps on the website for both Windows and MacOS. 
+> The steps are same for both, only apple users need to add the ssh key to their keychain. ( find using spotlight search )
+
+    -> Generate a new SSH key
+
+        => ssh-keygen -t ed25519 -C "your-email@chaicode.com"
+
+        > Here ed25519 is the type of key that you are generating. 
+        > This creates a new SSH key, using the provided email as label.
+    
+    -> Save the key
+
+        > After generating the key, you need to save it to your computer. 
+        > You can do this by running the following command:
+        > Enter a file in which to save the key 
+        
+        => /Users/YOU/.ssh/id_ALGORITHM : [Press enter]
+
+        > At the prompt you can enter passphrase for the key or you can leave it blank. 
+        > If you leave it blank, the key will be saved without a passphrase.
+
+    -> Add key to your ssh-agent
+
+        > After saving the key, you need to add it to your ssh-agent. 
+        > You can do this by running the following command:
+        > Here it is best to refer above link for more information, as Github has a lot of information on this. 
+        > There is no point in repeating it here.
+
+    -> Add key to github
+
+        > Use the web ui to add the key to your github account. 
+        > You can do this by following the instructions on the Github website.
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+{ Publish Code to Remote Repository } :
+
+> Create a new Repo on your system first, add some code and commit it.
+
+=> git init
+=> git add <files>
+=> git commit -m "commit message"
+
+> Remote URL Setting
+
+=> git remote -v
+
+> Add Remote Repository
+
+=> git remote add origin <remote-url>
+
+> Pushing Code
+
+=> git push remote-name branch-name
+
+- or -
+
+=> git push origin main
