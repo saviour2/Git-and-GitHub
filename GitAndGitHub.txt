@@ -10,7 +10,10 @@
     -> Version control
     -> Git version
     -> 
-
+    
+2.GitHub
+    -> Configuring Git
+    -> Setup SSH key
 
 
 
