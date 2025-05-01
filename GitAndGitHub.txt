@@ -597,3 +597,73 @@
 - or -
 
 => git push origin main
+
+> Sometimes you need to force push 
+
+=> git push --force origin main 
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+{ Setup an upstream remote } :
+
+> Setting up an upstream remote is useful when you want to keep your local repository up to date with the remote repository. 
+> It allows you to fetch and merge changes from the remote repository into your local repository.
+
+=> git remote add upstream <remote-url>
+
+- or -
+
+=> git remote add -u <remote-url>
+
+- or -
+
+=> git push -u origin main
+
+> This will set up an upstream remote and push your code to the remote repository.
+> This will allow you to run future commands like git pull and git push without specifying the remote name.
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+{ Get code from remote repository } :
+
+> There are two ways to get code from a remote repository:
+    -> fetch the code
+    -> pull the code
+
+> Pull the code means that you are going to download the code from the remote repository and merge it with your local repository.
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+{ Fetch code } : 
+
+> Fetch the code means that you are going to download the code from the remote repository to your local repository. 
+
+=> git fetch <remote-name>
+
+> Here <remote-name> is the name of the remote repository that you want to fetch from.
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+{ Pull code } : 
+
+=> git pull <remote-name> <branch-name>
+
+> Here <remote-name> is the name of the remote repository that you want to pull from. 
+> Here <branch-name> is the name of the branch that you want to pull.
+
+- or -
+
+=> git pull origin main
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+# References ~
+
+~ YouTube :     Chai aur Code
+~ Docs :        https://docs.chaicode.com/youtube/chai-aur-git/welcome/
+~ Websites :    https://github.com
+
+
+----------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------- [ THE END ] -------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------
