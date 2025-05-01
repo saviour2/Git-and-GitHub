@@ -6,3 +6,13 @@ so far a little confusing but nothing I can't handle
 changes are being made as usual
 
 Time to merge the two 
+
+changes made in main branch file
+testing 123
+123
+123
+123
+changes made in different branch after merging 123
+123
+123
+321
