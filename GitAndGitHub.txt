@@ -1,0 +1,122 @@
+----------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------[   Git and GitHub   ]------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------
+
+{ Git } : A software used for version control.
+          It is a version control system that allows you to track changes to your files and collaborate with others. 
+          It is used to manage the history of your code and to merge changes from different branches. 
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+{ Github } : An online service to host Git online.
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+{ Version control } : Tracks files for changes. ( Creating and handling checkpoints )
+                      They are used to manage the history of your code.
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+{ Check git version } : 
+
+=> git --version
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+{ Repository } : A repository is a collection of files and directories that are stored together. 
+                 It is a way to store and manage your code. A repository is like a folder on your computer, 
+                 but it is more than just a folder. It can contain other files, folders, and even other repositories. 
+                 You can think of a repository as a container that holds all your code.
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+{ Check current state of repo } :
+
+=> git status
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+{ Set config settings } :
+
+=> git config --global user.email "your-email@example.com"
+=> git config --global user.name "Your Name"
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+{ Check config settings } :
+
+=> git config --list
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+{ Creating a repository } :
+
+=> git init
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+{ Change default branch globally } :
+
+Purpose:            Sets the default branch name for new repositories you create in the future.
+Scope:              Global (affects all new repos on your system).
+When it applies:    Only when you run git init (initializes a new repo).
+
+Example:            git config --global init.defaultBranch main
+Now, every time you run git init, the default branch will be main instead of master.
+
+
+=> git config --global init.defaultBranch <name>
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+{ Renames the current branch locally } :
+
+Purpose:            Renames the current branch in an existing repository.
+Scope:              Local (only affects the current repo).
+When it applies:    After a repo is already created.
+
+Example:            git branch -m main  # Renames the current branch to "main"
+If you’re on master, this changes it to main in that repo only.
+
+=> git branch -m <name>
+
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+{ Git workflow BASIC } : WRITE -> ADD -> COMMIT
+
+{ Git workflow COMPLETE } : git init -> WORKING DIRECTORY -> git add -> STAGING AREA -> git commit -> REPO -> git push -> GITHUB 
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+{ Git commit } : Save the changes to your repo. 
+                 It saves and makes your changes permanent
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+{ Adding folder to repo } :
+
+=> git add <file-name1> <file-name2>
+=> git add . #add all files in the dir to repo
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------
