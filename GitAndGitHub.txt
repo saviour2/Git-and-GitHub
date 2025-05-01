@@ -439,6 +439,53 @@
 
 ----------------------------------------------------------------------------------------------------------------------------------
 
+{ Merge commits } : 
+
+> A merge commit is a commit that combines two or more commits into one. 
+> It is created when you merge two or more branches into a single branch. 
+> The merge commit contains all the changes from the original branches, and it is used to keep the project history clean and 
+    easy to understand.
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+{ Rebase in git } :
+
+> Git rebase is a powerful Git feature used to change the base of a branch. 
+> It effectively allows you to move a branch to a new starting point, usually a different commit, by “replaying” the commits 
+    from the original base onto the new base. 
+> This can be useful for keeping a cleaner, linear project history.
+> Some people like to use rebase over the merge command because it allows you to keep the commit history cleaner and easier to 
+    understand. 
+> It also allows you to make changes to the code without affecting the original branch.
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+{ Rebase workflow } :
+
+> Ensure you are on the branch you want to rebase.
+    -> This will replay the commits from feature-branch on top of the latest changes in main.
+
+=> git checkout <branch-name>
+=> git rebase main
+
+> Resolve any conflicts
+    -> If there are any conflicts, you will need to resolve them manually. 
+    -> You can use the merge tool in VSCode to resolve the conflicts.
+
+=> git add <resolved-files>
+=> git rebase --continue
+
+! Note : Try to avoid —force option when using rebase. It can cause issues with the project history. 
+----------------------------------------------------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------------------------------------------------
+
 ----------------------------------------------------------------------------------------------------------------------------------
 
 ----------------------------------------------------------------------------------------------------------------------------------
