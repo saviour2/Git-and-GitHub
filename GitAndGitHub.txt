@@ -479,7 +479,9 @@
 => git rebase --continue
 
 ! Note : Try to avoid —force option when using rebase. It can cause issues with the project history. 
+
 ----------------------------------------------------------------------------------------------------------------------------------
+
 { Change commit message } :
 
 > If you just need to change the message of the most recent commit that hasn't been pushed yet.
