@@ -2,18 +2,27 @@
 ------------------------------------------------------[   Git and GitHub   ]------------------------------------------------------
 ----------------------------------------------------------------------------------------------------------------------------------
 
-{ Git } : A software used for version control.
-          It is a version control system that allows you to track changes to your files and collaborate with others. 
-          It is used to manage the history of your code and to merge changes from different branches. 
+
+
+
+{ Git } : 
+
+> A software used for version control.
+> It is a version control system that allows you to track changes to your files and collaborate with others. 
+> It is used to manage the history of your code and to merge changes from different branches. 
 
 ----------------------------------------------------------------------------------------------------------------------------------
 
-{ Github } : An online service to host Git online.
+{ Github } : 
+
+> An online service to host Git online.
 
 ----------------------------------------------------------------------------------------------------------------------------------
 
-{ Version control } : Tracks files for changes. ( Creating and handling checkpoints )
-                      They are used to manage the history of your code.
+{ Version control } : 
+
+> Tracks files for changes. ( Creating and handling checkpoints )
+> They are used to manage the history of your code.
 
 ----------------------------------------------------------------------------------------------------------------------------------
 
@@ -23,10 +32,12 @@
 
 ----------------------------------------------------------------------------------------------------------------------------------
 
-{ Repository } : A repository is a collection of files and directories that are stored together. 
-                 It is a way to store and manage your code. A repository is like a folder on your computer, 
-                 but it is more than just a folder. It can contain other files, folders, and even other repositories. 
-                 You can think of a repository as a container that holds all your code.
+{ Repository } : 
+
+> A repository is a collection of files and directories that are stored together. 
+> It is a way to store and manage your code. A repository is like a folder on your computer, 
+> but it is more than just a folder. It can contain other files, folders, and even other repositories. 
+> You can think of a repository as a container that holds all your code.
 
 ----------------------------------------------------------------------------------------------------------------------------------
 
@@ -34,7 +45,7 @@
 
 => git status
 
-Note : use 'q' to quit from the status
+! Note : use 'q' to quit from the status
 
 ----------------------------------------------------------------------------------------------------------------------------------
 
@@ -59,12 +70,12 @@ Note : use 'q' to quit from the status
 
 { Change default branch globally } :
 
-Purpose:            Sets the default branch name for new repositories you create in the future.
-Scope:              Global (affects all new repos on your system).
-When it applies:    Only when you run git init (initialises a new repo).
+> Purpose:            Sets the default branch name for new repositories you create in the future.
+> Scope:              Global (affects all new repos on your system).
+> When it applies:    Only when you run git init (initialises a new repo).
 
-Example:            git config --global init.defaultBranch main
-Now, every time you run git init, the default branch will be main instead of master.
+> Example:            git config --global init.defaultBranch main
+    Now, every time you run git init, the default branch will be main instead of master.
 
 
 => git config --global init.defaultBranch <name>
@@ -73,24 +84,28 @@ Now, every time you run git init, the default branch will be main instead of mas
 
 { Renames the current branch locally } :
 
-Purpose:            Renames the current branch in an existing repository.
-Scope:              Local (only affects the current repo).
-When it applies:    After a repo is already created.
+> Purpose:            Renames the current branch in an existing repository.
+> Scope:              Local (only affects the current repo).
+> When it applies:    After a repo is already created.
 
-Example:            git branch -m main  # Renames the current branch to "main"
-If you’re on master, this changes it to main in that repo only.
+> Example:            git branch -m main  # Renames the current branch to "main"
+    If you’re on master, this changes it to main in that repo only.
 
 => git branch -m <name>
 
 ----------------------------------------------------------------------------------------------------------------------------------
 
-{ Git workflow BASIC } : WRITE -> ADD -> COMMIT
+{ Git workflow } : 
 
-{ Git workflow COMPLETE } : git init -> WORKING DIRECTORY -> git add -> STAGING AREA -> git commit -> REPO -> git push -> GITHUB 
+> Basic : WRITE -> ADD -> COMMIT
+
+> Complete : git init -> WORKING DIRECTORY -> git add -> STAGING AREA -> git commit -> REPO -> git push -> GITHUB 
 
 ----------------------------------------------------------------------------------------------------------------------------------
 
-{ Adding folder to staging area } : Moves the file to staging area, not yet committed to the repo.
+{ Adding folder to staging area } : 
+
+> Moves the file to staging area, not yet committed to the repo.
 
 => git add <file-name1> <file-name2>
 => git add . #add all files in the dir to repo
@@ -103,15 +118,17 @@ If you’re on master, this changes it to main in that repo only.
 
 ----------------------------------------------------------------------------------------------------------------------------------
 
-{ Git log } :   This command will show you the history of your repository. 
-                It will show you all the commits that were made to the repository.     
-                You can use the --oneline flag to show only the commit message. 
-                This will make the output more compact and easier to read.
+{ Git log } :   
+
+> This command will show you the history of your repository. 
+> It will show you all the commits that were made to the repository.     
+> You can use the --oneline flag to show only the commit message. 
+> This will make the output more compact and easier to read.
 
 => git log
 => git log --oneline
 
-Note : use 'q' to quit from the log
+! Note : use 'q' to quit from the log
 
 ----------------------------------------------------------------------------------------------------------------------------------
 
@@ -127,22 +144,25 @@ Note : use 'q' to quit from the log
 
 ----------------------------------------------------------------------------------------------------------------------------------
 
-{ Gitignore } : Gitignore is a file that tells git which files and folders to ignore. 
-                It is a way to prevent git from tracking certain files or folders. 
-                You can create a gitignore file and add list of files and folders to ignore.
+{ Gitignore } : 
+
+> Gitignore is a file that tells git which files and folders to ignore. 
+> It is a way to prevent git from tracking certain files or folders. 
+> You can create a gitignore file and add list of files and folders to ignore.
 
 -> Create a .gitignore file
 -> Add the file names in it to be ignored byt git ( example : node_modules, .env, .vscode, etc)
 
-Now, when you run the git status command, it will not show the node_modules and .vscode folders as being tracked by git.
+> Now, when you run the git status command, it will not show the node_modules, .env & .vscode folders as being tracked by git.
 
 ----------------------------------------------------------------------------------------------------------------------------------
 
-{ Git Branches } :  Branches are a way to work on different versions of a project at the same time. 
-                    They allow you to create a separate line of development that can be worked on independently 
-                    of the main branch. 
-                    This can be useful when you want to make changes to a project without affecting
-                    the main branch or when you want to work on a new feature or bug fix.
+{ Git Branches } :  
+
+> Branches are a way to work on different versions of a project at the same time. 
+> They allow you to create a separate line of development that can be worked on independently of the main branch. 
+> This can be useful when you want to make changes to a project without affecting the main branch or when you want 
+    to work on a new feature or bug fix.
 
 => git branch                   # This command lists all the branches in the current repository.
 => git branch bug-fix           # This command creates a new branch called bug-fix.
@@ -155,41 +175,50 @@ Now, when you run the git status command, it will not show the node_modules and 
 
 ----------------------------------------------------------------------------------------------------------------------------------
 
-{ HEAD in git } :   The HEAD is a pointer to the current branch that you are working on. 
-                    It points to the latest commit in the current branch. When you create a new branch, 
-                    it is automatically set as the HEAD of that branch.
+{ HEAD in git } :
+
+> The HEAD is a pointer to the current branch that you are working on. 
+> It points to the latest commit in the current branch. When you create a new branch, 
+> it is automatically set as the HEAD of that branch.
 
 ----------------------------------------------------------------------------------------------------------------------------------
 
-{ Merging branches } : In Git we have two types of merges :
-                            -> Fast-Forward Merges (If branches have not diverged)
-                            -> 3-Way Merges (if branches have diverged)
+{ Merging branches } : 
+
+> In Git we have two types of merges :
+    -> Fast-Forward Merges (If branches have not diverged)
+    -> 3-Way Merges (if branches have diverged)
 
 ----------------------------------------------------------------------------------------------------------------------------------
 
-{ Fast-forward merge } : This one is easy as branch that you are trying to merge is usually ahead and there are no conflicts.
-                         When you are done working on a branch, you can merge it back into the main branch.
+{ Fast-forward merge } : 
+
+> This one is easy as branch that you are trying to merge is usually ahead and there are no conflicts.
+> When you are done working on a branch, you can merge it back into the main branch.
 
 => git checkout main
 => git merge <branch-name>
 
-This is a fast-forward merge. It means that the commits in the <branch-name> branch are directly merged into the main branch. 
-This can be useful when you want to merge a branch that has already been pushed to the remote repository.
+> This is a fast-forward merge. It means that the commits in the <branch-name> branch are directly merged into the main branch. 
+> This can be useful when you want to merge a branch that has already been pushed to the remote repository.
 
 ----------------------------------------------------------------------------------------------------------------------------------
 
-{ 3 Way merge } : In this type of merge, the main branch has additional commits that are not present in the bug-fix branch. 
-                  This is not a fast-forward merge. Here git looks at 3 different commits 
-                  [common ancestor of branches + tips of each branch] and combines the changes into one merge commit.
+{ 3 Way merge } : 
+
+> In this type of merge, the main branch has additional commits that are not present in the bug-fix branch. 
+> This is not a fast-forward merge. Here git looks at 3 different commits [common ancestor of branches + tips of each branch] 
+    and combines the changes into one merge commit.
 
 => git checkout main
 => git merge <branch-name>
 
-Note : If the command are same, what is the difference between fast-forward and not fast-forward merge?
+> Note : If the command are same, what is the difference between fast-forward and not fast-forward merge?
 
-The difference is resolving the conflicts. In a fast-forward merge, there are no conflicts. But in a not fast-forward merge, 
-there are conflicts, and there are no shortcuts to resolve them. You have to manually resolve the conflicts. Decide, 
-what to keep and what to discard. VSCode has a built-in merge tool that can help you resolve the conflicts.
+> The difference is resolving the conflicts. In a fast-forward merge, there are no conflicts. 
+> But in a not fast-forward merge, there are conflicts, and there are no shortcuts to resolve them. 
+> You have to manually resolve the conflicts. Decide, what to keep and what to discard. 
+> VSCode has a built-in merge tool that can help you resolve the conflicts.
 
 ----------------------------------------------------------------------------------------------------------------------------------
 
@@ -217,10 +246,23 @@ what to keep and what to discard. VSCode has a built-in merge tool that can help
 
 ----------------------------------------------------------------------------------------------------------------------------------
 
-{ }
+{ Git diff } :  
+
+> It is an informative command that shows the differences between two commits. 
+> It is used to compare the changes made in one commit with the changes made in another commit. 
+> Git consider the changed versions of same file as two different files. 
+> Then it gives names to these two files and shows the differences between them.
 
 
 ----------------------------------------------------------------------------------------------------------------------------------
+
+{ How to Read the Diff Output } : 
+
+> a/ – the original file (before changes)
+> b/ – the updated file (after changes)
+> --- – marks the beginning of the original file
+> +++ – marks the beginning of the updated file
+> @@ – shows the line numbers and position of changes
 
 ----------------------------------------------------------------------------------------------------------------------------------
 
