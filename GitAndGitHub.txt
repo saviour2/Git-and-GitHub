@@ -2,8 +2,26 @@
 ------------------------------------------------------[   Git and GitHub   ]------------------------------------------------------
 ----------------------------------------------------------------------------------------------------------------------------------
 
+# INDEX ~
+
+1.Git Main
+    -> Git
+    -> GitHub
+    -> Version control
+    -> Git version
+    -> 
 
 
+
+
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+# CONTENT ~
+
+----------------------------------------------------------------------------------------------------------------------------------
 
 { Git } : 
 
@@ -213,7 +231,7 @@
 => git checkout main
 => git merge <branch-name>
 
-> Note : If the command are same, what is the difference between fast-forward and not fast-forward merge?
+! Note : If the command are same, what is the difference between fast-forward and not fast-forward merge?
 
 > The difference is resolving the conflicts. In a fast-forward merge, there are no conflicts. 
 > But in a not fast-forward merge, there are conflicts, and there are no shortcuts to resolve them. 
@@ -252,7 +270,8 @@
 > It is used to compare the changes made in one commit with the changes made in another commit. 
 > Git consider the changed versions of same file as two different files. 
 > Then it gives names to these two files and shows the differences between them.
-
+> Git diff will show you the changes made in the file A and file B. 
+> It will also show you the line number where the change occurred along with little preview of the change.
 
 ----------------------------------------------------------------------------------------------------------------------------------
 
@@ -266,15 +285,157 @@
 
 ----------------------------------------------------------------------------------------------------------------------------------
 
-----------------------------------------------------------------------------------------------------------------------------------
+{ Comparing Working Directory and Staging Area } : 
+
+> This command shows the unstaged changes in your working directory compared to the staging area. 
+> This command alone will not show you the changes made in the file A & file B, you need to provide options to show the changes.
+
+=> git diff  
 
 ----------------------------------------------------------------------------------------------------------------------------------
 
-----------------------------------------------------------------------------------------------------------------------------------
+{ Comparing Staging Area with Repositor } : 
+
+> This command shows the changes between your last commit and the staging area 
+    (i.e., changes that are staged and ready to be committed).
+
+=> git diff --staged
 
 ----------------------------------------------------------------------------------------------------------------------------------
 
+{ Comparing Two Branches } :
+
+> This command compares the difference between two branches.
+
+=> git diff <branch-name-one> <branch-name-two>
+
+ - or -
+
+=> git diff branch-name-one..branch-name-two
+
 ----------------------------------------------------------------------------------------------------------------------------------
+
+{ Comparing Specific Commits } :
+
+> This command compares the difference between two commits.
+
+=> git diff <commit-hash-one> <commit-hash-two>
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+{ Git Stash } :
+
+> Stash is a way to save your changes in a temporary location. 
+> It’s useful when switching branches without losing work. You can then come back to the file later and apply the changes.
+> Conflicting changes will not allow you to switch branches without committing the changes. 
+> Another alternative is to use the git stash command to save your changes in a temporary location.
+
+=> git stash
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+{ Naming the stash } :
+
+=> git stash save "work in progress on X feature"
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+{ View the stash list } :
+
+=> git stash list
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+{ Apply the Most Recent Stash } :
+
+=> git stash apply
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+{ Apply Specific Stash } :
+
+=> git stash apply stash@{0}
+
+! Note : Here stash@{0} is the name of the stash. You can use the git stash list command to get the name of the stash.
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+{ Applying and Dropping a Stash } :
+
+=> git stash pop
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+{ Drop the stash } :
+
+=> git stash drop
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+{ Applying stash to a specific branch } :
+
+=> git stash apply stash@{0} <branch-name>
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+{ Clearing the stash } : 
+
+=> git stash clear
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+{ Git Tags } :
+
+> Tags are a way to mark a specific point in your repository. 
+> They are useful when you want to remember a specific version of your code or when you want to refer to a specific commit. 
+> Tags are like sticky notes that you can attach to your commits.
+
+! Note : Tags are very rarely used and should be done so mostly on final deployment versions.
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+{ Creating a tag } : 
+
+=> git tag <tag-name>
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+{ Create an annotated tag } :
+
+> This command creates an annotated tag with the specified name and message. 
+> The tag will be attached to the current commit.
+
+=> git tag -a <tag-name> -m "Release 1.0"
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+{ List all tags } :
+
+=> git tag
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+{ Tagging a specific commit } :
+
+=> git tag <tag-name> <commit-hash>
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+{ Push tags to remote repository } :
+
+=> git push origin <tag-name>
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+{ Delete a tag } :
+
+=> git tag -d <tag-name>
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+{ Delete tag on remote repository } :
+
+=> git push origin :<tag-name>
 
 ----------------------------------------------------------------------------------------------------------------------------------
 
