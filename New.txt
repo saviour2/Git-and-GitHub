@@ -2,3 +2,7 @@ This is to test branches in git
 adding changes for trying branches
 
 so far a little confusing but nothing I can't handle
+
+changes are being made as usual
+
+Time to merge the two 
