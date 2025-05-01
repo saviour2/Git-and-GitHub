@@ -82,7 +82,6 @@ If you’re on master, this changes it to main in that repo only.
 
 => git branch -m <name>
 
-
 ----------------------------------------------------------------------------------------------------------------------------------
 
 { Git workflow BASIC } : WRITE -> ADD -> COMMIT
@@ -118,14 +117,23 @@ Note : use 'q' to quit from the log
 
 { Remove files from add / unstage } :
 
-=>git rm --cached <file-name>
+=> git rm --cached <file-name>
 
 ----------------------------------------------------------------------------------------------------------------------------------
 
+{ Add VS Code as default commit editor } : 
 
+=> git config --global core.editor "code --wait"
 
 ----------------------------------------------------------------------------------------------------------------------------------
 
+{ Gitignore } : Gitignore is a file that tells git which files and folders to ignore. 
+                It is a way to prevent git from tracking certain files or folders. 
+                You can create a gitignore file and add list of files and folders to ignore.
 
+-> Create a .gitignore file
+-> Add the file names in it to be ignored byt git ( example : node_modules, .env, .vscode, etc)
+
+Now, when you run the git status command, it will not show the node_modules and .vscode folders as being tracked by git.
 
 ----------------------------------------------------------------------------------------------------------------------------------
