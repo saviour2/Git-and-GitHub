@@ -61,7 +61,7 @@ Note : use 'q' to quit from the status
 
 Purpose:            Sets the default branch name for new repositories you create in the future.
 Scope:              Global (affects all new repos on your system).
-When it applies:    Only when you run git init (initializes a new repo).
+When it applies:    Only when you run git init (initialises a new repo).
 
 Example:            git config --global init.defaultBranch main
 Now, every time you run git init, the default branch will be main instead of master.
@@ -91,7 +91,7 @@ If you’re on master, this changes it to main in that repo only.
 
 ----------------------------------------------------------------------------------------------------------------------------------
 
-{ Adding folder to staging area } : Moves the file to staging area, not yet commited to the repo.
+{ Adding folder to staging area } : Moves the file to staging area, not yet committed to the repo.
 
 => git add <file-name1> <file-name2>
 => git add . #add all files in the dir to repo
@@ -110,12 +110,15 @@ If you’re on master, this changes it to main in that repo only.
                 This will make the output more compact and easier to read.
 
 => git log
+=> git log --oneline
 
 Note : use 'q' to quit from the log
 
 ----------------------------------------------------------------------------------------------------------------------------------
 
+{ Remove files from add / unstage } :
 
+=>git rm --cached <file-name>
 
 ----------------------------------------------------------------------------------------------------------------------------------
 
