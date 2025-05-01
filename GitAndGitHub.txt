@@ -34,6 +34,8 @@
 
 => git status
 
+Note : use 'q' to quit from the status
+
 ----------------------------------------------------------------------------------------------------------------------------------
 
 { Set config settings } :
@@ -89,23 +91,27 @@ If you’re on master, this changes it to main in that repo only.
 
 ----------------------------------------------------------------------------------------------------------------------------------
 
-{ Git commit } : Save the changes to your repo. 
-                 It saves and makes your changes permanent
-
-----------------------------------------------------------------------------------------------------------------------------------
-
-{ Adding folder to repo } :
+{ Adding folder to staging area } : Moves the file to staging area, not yet commited to the repo.
 
 => git add <file-name1> <file-name2>
 => git add . #add all files in the dir to repo
 
 ----------------------------------------------------------------------------------------------------------------------------------
 
+{ Git commit } : Save the changes and makes your changes permanent to your repo.
 
+=> git commit -m "message"
 
 ----------------------------------------------------------------------------------------------------------------------------------
 
+{ Git log } :   This command will show you the history of your repository. 
+                It will show you all the commits that were made to the repository.     
+                You can use the --oneline flag to show only the commit message. 
+                This will make the output more compact and easier to read.
 
+=> git log
+
+Note : use 'q' to quit from the log
 
 ----------------------------------------------------------------------------------------------------------------------------------
 
