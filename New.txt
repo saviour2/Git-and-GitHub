@@ -6,3 +6,12 @@ so far a little confusing but nothing I can't handle
 changes are being made as usual
 
 Time to merge the two 
+
+some additional changes in the main branch file
+
+change 781
+781
+781
+1
+1
+1
